@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jgthms/minireset.css/master/minireset.css">
+    <link rel="stylesheet" href="css/debug.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="page">
+      <p>{{ userData }}</p>
+    </div>
+    <script>
+
+      "use strict";
+
+      var page = new Vue({
+        el: "#page",
+        data: {
+          userData: "This is a text box."
+        }
+      })
+
+    </script>
+
+  </body>
+</html>
