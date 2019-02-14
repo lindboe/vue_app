@@ -9,7 +9,8 @@
   </head>
   <body>
     <div id="page">
-      <p>{{ userData }}</p>
+      <input v-model="text">
+      <button @click="persist">Save</button>
     </div>
     <script>
 
@@ -18,7 +19,17 @@
       var page = new Vue({
         el: "#page",
         data: {
-          userData: "This is a text box."
+          text: "This is a text box."
+        },
+        mounted() {
+          if (localStorage.text) {
+            this.text = localStorage.text;
+          }
+        },
+        watch: {
+          text(newText) {
+            localStorage.text = newText;
+          }
         }
       })
 
