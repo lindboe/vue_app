@@ -26,9 +26,9 @@
             this.text = localStorage.text;
           }
         },
-        watch: {
-          text(newText) {
-            localStorage.text = newText;
+        methods: {
+          persist() {
+            localStorage.text = this.text;
           }
         }
       })
