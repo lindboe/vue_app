@@ -8,11 +8,17 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-
-    <div id="page">
+<!--
+    <p id="page">
       <input v-model="text">
       <button @click="persist">Save</button>
-    </div>
+    </p>
+-->
+    <p id="page">
+      <text-box
+        v-model="text"
+        v-on:persist="persist"></text-box>
+    </p>
     <script src="index.js"></script>
 
   </body>
